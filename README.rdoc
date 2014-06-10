@@ -22,6 +22,7 @@ Given the models in the repo:
 Camp1's assertion proven wrong.
 
 2.0.0-p481 :008 > beer.classifications.first.primary
+
 NoMethodError: undefined method `primary' for #<Classification:0x00000101665948>
 
 The joy of programming!  It's the little things!
