@@ -1,10 +1,8 @@
 == README
 
-Beers were wagered, yes beers were wagered as an office conversation today split into 2 camps.   The topic: many to many
- relationships and fields on the join table.
+Beers were wagered, yes beers were wagered as an office conversation today split into 2 camps.   The topic: many to many relationships and fields on the join table.
 
-Camp1 asserts that the join table field is accessible through the other side of the many to many assoicati
-on, in the following example: beer.classifications.primary.
+Camp1 asserts that the join table field is accessible through the other side of the many to many assoication, in the following example: beer.classifications.primary.
 
 The other camp asserts the field on the join table is accessible only through the join model.
 
