@@ -1,14 +1,29 @@
 == README
 
-* beer = Beer.create! name: "laguanitas"
+Beers were wagered, yes beers were wagered as an office conversation today split into 2 camps.   The topic: many to many
+ relationships and fields on the join table.
 
-* classification = Classification.create! name: "IPA"
+Camp1 asserts that the join table field is accessible through the other side of the many to many assoicati
+on, in the following example: beer.classifications.primary.
+
+The other camp asserts the field on the join table is accessible only through the join model.
+
+The power of rails allowed us to test our assertions in just a few minutes.   See the console output below for the definitive answer.
+
+Given the models in the repo:
+
+2.0.0-p481 :011 >  beer = Beer.create! name: "laguanitas"
+
+2.0.0-p481 :012 > classification = Classification.create! name: "IPA"
 
 2.0.0-p481 :013 > beer.beers_classifications
 
 2.0.0-p481 :014 > beer.beers_classifications.first.primary
  => true
 
+Camp1's assertion proven wrong.
+
 2.0.0-p481 :008 > beer.classifications.first.primary
 NoMethodError: undefined method `primary' for #<Classification:0x00000101665948>
 
+The joy of programming!  It's the little things!
